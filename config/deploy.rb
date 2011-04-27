@@ -11,6 +11,7 @@ set :copy_cache, false
 set :copy_exclude, [".git/*", "log/*.log"]
 set :copy_compression, :gzip
 
+ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/tnwhack.pem"]
 
 for argument in ARGV
   if argument =~ /^servers=/
