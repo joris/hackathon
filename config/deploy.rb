@@ -21,7 +21,7 @@ end
 
 if servers
   for host in servers
-    server(host, :web)
+    server("root@#{host}", :web)
   end
 else
   role :web, "test1", "test2", "live1", "live2"
